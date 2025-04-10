@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">A carregar...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="text-primary m-0">
+                <span class="text-eat">Eat</span><span class="text-simple">Simple</span>
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="about.html" class="nav-item nav-link active" data-lang="sobre">Sobre nós</a>
+                <a href="index.html" class="nav-item nav-link" data-lang="menu">Menu</a>
+                <a href="https://www.instagram.com/eatsimple___/" class="nav-item nav-link" data-lang="contacto">Contacta-nos</a>
+            </div>
+            <a href="Order.html" class="btn btn-primary py-2 px-4" data-lang="encomendar">Encomendar</a>
+            
+            <!-- Language Selector with Flags -->
+            <select id="languageSelector" class="ms-3 form-select form-select-sm w-auto">
+                <option value="pt" data-icon="flag-icon-pt">PT</option>
+                <option value="en" data-icon="flag-icon-gb">EN</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container-xxl py-5 bg-dark hero-header mb-5">
+        <div class="container text-center my-5 pt-5 pb-4">
+            <h1 class="display-3 text-white mb-3 animated slideInDown" data-lang="menu">Menu</h1>
+        </div>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/plac1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/plac4.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/plac3.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/tt13.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal" data-lang="sobretitulo">Sobre nós</h5>
+                        <h1 class="mb-4"><span data-lang="bemvindo">Bem-vindo à</span> <i>EatSimple</i></h1>
+                        <p class="mb-4" data-lang="sobretexto1">
+                            Na EatSimple, criamos refeições saudáveis, deliciosas e totalmente personalizadas, ajustadas aos teus objetivos e estilo de vida. Quer estejas em Cut, Bulk ou Manutenção, as nossas refeições são pensadas para te ajudar a atingir as tuas metas sem complicações. Com calorias calculadas, ingredientes frescos e foco nas tuas necessidades individuais, tiramos-te o stress da preparação das tuas refeições. Esquece o tempo perdido a pensar no que comer ou a cozinhar – nós tratamos disso por ti!
+                        </p>
+                        <p class="mb-4" data-lang="sobretexto2">
+                            Escolhe o teu objetivo, partilha as tuas preferências e deixa o resto connosco. Come melhor, sente-te melhor e alcança os teus objetivos com facilidade.
+                        </p>
+                    </div>
+                    
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        
+        <script>
+            const translations = {
+    'pt': {
+        'sobre': 'Sobre nós',
+        'menu': 'Menu',
+        'contacto': 'Contacta-nos',
+        'encomendar': 'Encomendar',
+        "T1": "Pequeno-Almoço, almoço ou jantar, tudo a pensar em ti",
+        company: "Empresa",
+        about_us: "Sobre nós",
+        contact_us: "Fale conosco",
+        order: "Fazer pedido",
+        privacy_policy: "Política de privacidade",
+        terms_conditions: "Termos e condições",
+        contacts: "Contatos",
+        phone: "+351 937097975",
+        email: "BeebsCooking@gmail.com",
+        newsletter: "Newsletter",
+        newsletter_text: "Receba todas as novidades e aproveite descontos exclusivos",
+        email_placeholder: "Seu e-mail",
+        subscribe: "Inscrever-me",
+        brand: "EatSimple",
+        rights_reserved: "Todos os direitos reservados.",
+        designed_by: "Desenvolvido por",
+        html_codex: "HTML Codex",
+        help: "Ajuda",
+        faq: "Perguntas Frequentes",
+        sobretitulo: "Sobre nós",
+        bemvindo: "Bem-vindo à",
+        sobretexto1: "Na EatSimple, criamos refeições saudáveis, deliciosas e totalmente personalizadas, ajustadas aos teus objetivos e estilo de vida. Quer estejas em Cut, Bulk ou Manutenção, as nossas refeições são pensadas para te ajudar a atingir as tuas metas sem complicações. Com calorias calculadas, ingredientes frescos e foco nas tuas necessidades individuais, tiramos-te o stress da preparação das tuas refeições. Esquece o tempo perdido a pensar no que comer ou a cozinhar – nós tratamos disso por ti!",
+        sobretexto2: "Escolhe o teu objetivo, partilha as tuas preferências e deixa o resto connosco. Come melhor, sente-te melhor e alcança os teus objetivos com facilidade."
+    }, 
+
+    'en': {
+       'sobre': 'About Us',
+            'menu': 'Menu',
+            'contacto': 'Contact Us',
+            'encomendar': 'Order',
+            "T1": "Breakfast, lunch, or dinner, all thinking about you.",
+        company: "Company",
+        about_us: "About Us",
+        contact_us: "Contact Us",
+        order: "Order",
+        privacy_policy: "Privacy Policy",
+        terms_conditions: "Terms & Conditions",
+        contacts: "Contacts",
+        phone: "+351 937097975",
+        email: "BeebsCooking@gmail.com",
+        newsletter: "Newsletter",
+        newsletter_text: "Get all the latest news and enjoy exclusive discounts",
+        email_placeholder: "Your email",
+        subscribe: "Subscribe",
+        brand: "EatSimple",
+        rights_reserved: "All rights reserved.",
+        designed_by: "Designed by",
+        html_codex: "HTML Codex",
+        help: "Help",
+        faq: "FAQs",
+        sobretitulo: "About Us",
+        bemvindo: "Welcome to",
+        sobretexto1: "At EatSimple, we create healthy, delicious, and fully customized meals tailored to your goals and lifestyle. Whether you're in a Cutting, Bulking, or Maintenance phase, our meals are designed to help you reach your goals effortlessly. With calculated calories, fresh ingredients, and a focus on your individual needs, we take the stress out of meal preparation. Forget the time wasted thinking about what to eat or cooking – we take care of it for you!",
+        sobretexto2: "Choose your goal, share your preferences, and leave the rest to us. Eat better, feel better, and achieve your goals with ease."
+    }
+};
+
+
+function updateLanguage(lang) {
+        const elements = document.querySelectorAll('[data-lang]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-lang');
+            const translation = translations[lang][key];
+
+            if (translation) {
+                if (el.placeholder !== undefined) {
+                    el.placeholder = translation;
+                }
+
+                if (el.tagName === "INPUT" || el.tagName === "BUTTON") {
+                    el.value = translation;
+                } else {
+                    el.textContent = translation;
+                }
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'pt';
+        document.getElementById('languageSelector').value = savedLang;
+        updateLanguage(savedLang);
+    });
+
+    document.getElementById('languageSelector').addEventListener('change', function () {
+        const lang = this.value;
+        localStorage.setItem('selectedLanguage', lang);
+        updateLanguage(lang);
+    });
+        </script>
+
+        <!-- Footer Start -->
+         <!-- Rodapé Início -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="company">Empresa</h4>
+                <a class="btn btn-link" href="about.html" data-lang="about_us">Sobre nós</a>
+                <a class="btn btn-link" href="https://www.instagram.com/eatsimple___/" data-lang="contact_us">Fale conosco</a>
+                <a class="btn btn-link" href="Order.html" data-lang="order">Fazer pedido</a>
+                <a class="btn btn-link" href="" data-lang="privacy_policy">Política de privacidade</a>
+                <a class="btn btn-link" href="" data-lang="terms_conditions">Termos e condições</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="contacts">Contatos</h4>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><span data-lang="phone">+351 937097975</span></p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><span data-lang="email">BeebsCooking@gmail.com</span></p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61571015889979"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="newsletter">Newsletter</h4>
+                <p data-lang="newsletter_text">Receba todas as novidades e aproveite descontos exclusivos</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Seu e-mail" data-lang="email_placeholder">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" data-lang="subscribe">Inscrever-me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#" data-lang="brand">EatSimple</a>, <span data-lang="rights_reserved">Todos os direitos reservados.</span>
+                    <span data-lang="designed_by">Desenvolvido por</span> <a class="border-bottom" href="https://htmlcodex.com/" data-lang="html_codex">HTML Codex</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="index.html" data-lang="menu">Menu</a>
+                        <a href="" data-lang="help">Ajuda</a>
+                        <a href="" data-lang="faq">Perguntas Frequentes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Rodapé Fim -->
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
