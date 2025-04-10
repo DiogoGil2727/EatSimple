@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+   
+    <link href="img/favicon.ico" rel="icon">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">A carregar...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+         <!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="text-primary m-0">
+                <span class="text-eat">Eat</span><span class="text-simple">Simple</span>
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="about.html" class="nav-item nav-link" data-lang="sobre">Sobre nós</a>
+                <a href="index.html" class="nav-item nav-link" data-lang="menu">Menu</a>
+                <a href="https://www.instagram.com/eatsimple___/" class="nav-item nav-link" data-lang="contacto">Contacta-nos</a>
+            </div>
+            <a href="Order.html" class="btn btn-primary py-2 px-4" data-lang="encomendar">Encomendar</a>
+            
+            <!-- Language Selector with Flags -->
+            <select id="languageSelector" class="ms-3 form-select form-select-sm w-auto">
+                <option value="pt" data-icon="flag-icon-pt">PT</option>
+                <option value="en" data-icon="flag-icon-gb">EN</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container-xxl py-5 bg-dark hero-header mb-5">
+        <div class="container text-center my-5 pt-5 pb-4">
+            <h1 class="display-3 text-white mb-3 animated slideInDown" data-lang="oteu">Número de Refeições personalizado</h1>
+        </div>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
+
+        <!-- Form start -->
+        <div class="form-container">
+            <div class="form-content">
+                <h2 data-lang="personaliza">Personaliza a tua Refeição</h2>
+                <div class="form-group">
+                    <select class="form-control" name="objetivo" required>
+                        <option value="" data-lang="selecioneobjetivo">Selecione Objetivo...</option>
+                        <option value="bulk" data-lang="bulk">Bulk (Aumento de Massa)</option>
+                        <option value="cut" data-lang="cut">Cut (Definição)</option>
+                        <option value="manutencao" data-lang="manutencao">Manutenção</option>
+                    </select>
+                    <input type="number" placeholder="Peso (Kg)" data-lang-placeholder="peso">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Idade" data-lang-placeholder="idade">
+                    <select class="form-control" name="Sexo" required>
+                        <option value="" data-lang="selecionesexo">Sexo</option>
+                        <option value="masculino" data-lang="masculino">Masculino</option>
+                        <option value="feminino" data-lang="feminino">Feminino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" data-lang-placeholder="email">
+                </div>
+        
+                <select class="form-control" name="Nível de atividade física" required>
+                    <option value="" data-lang="selecioneatividade">Selecione Nível de atividade física...</option>
+                    <option value="regular" data-lang="regular">Regular</option>
+                    <option value="sedent" data-lang="sedentario">Sedentário</option>
+                    <option value="atleta" data-lang="atleta">Atleta</option>
+                </select>
+        
+                <p class="error" id="error-message" data-lang="erro-formulario">
+                    Precisas de responder a todos os campos de personalização...
+                </p>
+                <button class="btn-next">Próximo</button>
+            </div>
+            <img src="img/dev.avif" alt="Free Delivery">
+        </div>
+        
+        
+        <style>
+            .error { color: red; display: none; }
+
+            #error-message {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            }
+
+            .form-container {
+                width: 90%;
+                max-width: 900px;
+                background: white;
+                padding: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                margin: 0 auto; 
+            }
+
+            .form-content {
+                flex: 1;
+            }
+
+            h2 {
+                text-align: left;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .form-group {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 15px;
+            }
+
+
+            .form-group input {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .full-width {
+                width: 100%;
+            }
+
+            .btn-next {
+                background: #4CAF50;
+                margin-top: 10px;
+                color: white;
+                border: none;
+                padding-top: 10px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: block;
+                margin-left: auto;
+            }
+            .btn-back {
+                background: #9d9d9d;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: block;
+                margin-right: auto;
+            }
+
+            img {
+                width: 350px;
+                height: auto;
+                margin-left: 100px;
+            }
+        </style>
+        
+        <!-- Form End -->
+
+        <!-- NEW NEW NEW NEW NEW NEW NEW NEW -->
+
+        <!-- Segunda Etapa do Formulário -->
+        <div class="form-step-2" style="display: none;">
+            <h2 data-lang="escolhe">Escolhe o teu Plano</h2>
+            <div class="plan-options">
+                <button class="plan-btn" data-lang ="personalizado" data-plan="personalizado">Plano Personalizado</button>
+                <button class="plan-btn" data-lang ="semanal" data-plan="semanal">Plano Semanal (7 Dias)</button>
+                <button class="plan-btn" data-lang ="mensal" data-plan="mensal">Plano Mensal (30 Dias)</button>
+            </div>
+            <div class="button-container">
+                <button class="btn-back" data-lang="reg" id="back-to-form">Regressar</button>
+                <button class="btn-next" id="continue-plan">Continuar</button>
+            </div>
+        </div>
+
+        <script>
+
+
+
+const translations = {
+        'pt': {
+            'sobre': 'Sobre nós',
+            'menu': 'Menu',
+            'contacto': 'Contacta-nos',
+            'encomendar': 'Encomendar',
+            "T1": "Pequeno-Almoço, Almoço ou Jantar, tudo a pensar em ti",
+            company: "Empresa",
+            about_us: "Sobre nós",
+            contact_us: "Fale conosco",
+            order: "Fazer pedido",
+            privacy_policy: "Política de privacidade",
+            terms_conditions: "Termos e condições",
+            contacts: "Contatos",
+            phone: "+351 937097975",
+            email: "BeebsCooking@gmail.com",
+            newsletter: "Newsletter",
+            newsletter_text: "Receba todas as novidades e aproveite descontos exclusivos",
+            email_placeholder: "Seu e-mail",
+            subscribe: "Inscrever-me",
+            brand: "EatSimple",
+            rights_reserved: "Todos os direitos reservados.",
+            designed_by: "Desenvolvido por",
+            html_codex: "HTML Codex",
+            menu: "Menu",
+            help: "Ajuda",
+            faq: "Perguntas Frequentes",
+            personaliza: "Personaliza a tua Refeição",
+        selecioneobjetivo: "Selecione Objetivo...",
+        bulk: "Bulk (Aumento de Massa)",
+        cut: "Cut (Definição)",
+        manutencao: "Manutenção",
+        peso: "Peso (Kg)",
+        idade: "Idade",
+        selecionesexo: "Sexo",
+        masculino: "Masculino",
+        feminino: "Feminino",
+        email: "Email",
+        selecioneatividade: "Selecione Nível de atividade física...",
+        regular: "Regular",
+        sedentario: "Sedentário",
+        atleta: "Atleta",
+        erroformulario: "Precisas de responder a todos os campos de personalização...",
+        proximo: "Próximo",
+        personalizado: "Plano Personalizado",
+        semanal: "Plano Semanal (7 Dias)",
+        mensal: "Plano Mensal (30 Dias)",
+        reg: "Regressar",
+        cont: "Continuar",
+        escolhe: "Escolhe o teu Plano",
+        oteu: "O teu plano"
+            
+
+
+        },
+        'en': {
+            'sobre': 'About Us',
+            'menu': 'Menu',
+            'contacto': 'Contact Us',
+            'encomendar': 'Order',
+            "T1": "Breakfast, Lunch, or Dinner, all thinking about you.",
+            company: "Company",
+            about_us: "About Us",
+            contact_us: "Contact Us",
+            order: "Order",
+            privacy_policy: "Privacy Policy",
+            terms_conditions: "Terms & Conditions",
+            contacts: "Contacts",
+            phone: "+351 937097975",
+            email: "BeebsCooking@gmail.com",
+            newsletter: "Newsletter",
+            newsletter_text: "Get all the latest news and enjoy exclusive discounts",
+            email_placeholder: "Your email",
+            subscribe: "Subscribe",
+            brand: "EatSimple",
+            rights_reserved: "All rights reserved.",
+            designed_by: "Designed by",
+            html_codex: "HTML Codex",
+            menu: "Menu",
+            help: "Help",
+            faq: "FAQs",
+            personaliza: "Customize Your Meal",
+        selecioneobjetivo: "Select Goal...",
+        bulk: "Bulk (Muscle Gain)",
+        cut: "Cut (Definition)",
+        manutencao: "Maintenance",
+        peso: "Weight (Kg)",
+        idade: "Age",
+        selecionesexo: "Gender",
+        masculino: "Male",
+        feminino: "Female",
+        email: "Email",
+        selecioneatividade: "Select Activity Level...",
+        regular: "Regular",
+        sedentario: "Sedentary",
+        atleta: "Athlete",
+        erroformulario: "You need to answer all customization fields...",
+        proximo: "Next",
+        personalizado: "Personalized Plan",
+        semanal: "Weekly Plan (7 Days)",
+        mensal: "Monthly Plan (30 Days)",
+        reg: "Back",
+        cont: "Continue",
+        escolhe: "Choose your plan",
+        oteu: "Your Plan"
+            
+        }
+    };
+
+   
+
+    function updateLanguage(lang) {
+    document.querySelectorAll("[data-lang]").forEach(element => {
+        const key = element.getAttribute("data-lang");
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];  // Usa textContent para garantir que o texto seja atualizado corretamente
+        }
+    });
+
+    document.querySelectorAll("[data-lang-placeholder]").forEach(input => {
+        const key = input.getAttribute("data-lang-placeholder");
+        if (translations[lang][key]) {
+            input.setAttribute("placeholder", translations[lang][key]);
+        }
+    });
+}
+
+document.getElementById('languageSelector').addEventListener('change', function() {
+    let lang = this.value;
+    updateLanguage(lang);
+    // Reassociar o evento após a troca de linguagem
+    const btnNext = document.querySelector(".btn-next");
+    if (btnNext) {
+        addNextButtonEventListener();
+    }
+});
+
+window.addEventListener('DOMContentLoaded', function () {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'pt';
+        document.getElementById('languageSelector').value = savedLang;
+        updateLanguage(savedLang);
+    });
+
+    document.getElementById('languageSelector').addEventListener('change', function () {
+        const lang = this.value;
+        localStorage.setItem('selectedLanguage', lang);
+        updateLanguage(lang);
+    });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Aguardar até que o DOM esteja totalmente carregado
+    const btnNext = document.querySelector(".btn-next");
+    
+    if (btnNext) {
+        // Função que adiciona o evento de clique ao botão "Próximo"
+        function addNextButtonEventListener() {
+            btnNext.removeEventListener("click", handleNextButtonClick);  // Remover o evento anterior
+            btnNext.addEventListener("click", handleNextButtonClick);      // Adicionar o evento atualizado
+        }
+
+        function handleNextButtonClick() {
+            const objetivo = document.querySelector("select[name='objetivo']").value;
+            const peso = document.querySelector("input[placeholder='Peso (Kg)']").value;
+            const idade = document.querySelector("input[placeholder='Idade']").value;
+            const sexo = document.querySelector("select[name='Sexo']").value;
+            const email = document.querySelector("input[placeholder='Email']").value;
+            const nivelAtividade = document.querySelector("select[name='Nível de atividade física']").value;
+
+            // Verificar se todos os campos obrigatórios estão preenchidos
+            if (objetivo && peso && idade && sexo && email && nivelAtividade) {
+                // Criar um objeto com os dados
+                const userData = {
+                    objetivo,
+                    peso,
+                    idade,
+                    sexo,
+                    email,
+                    nivelAtividade
+                };
+
+                // Guardar os dados no localStorage
+                localStorage.setItem("userData", JSON.stringify(userData));
+
+                // Esconder a mensagem de erro
+                document.querySelector("#error-message").style.display = "none";
+
+                // Avançar para o próximo passo (esconder o formulário atual e exibir o próximo passo)
+                document.querySelector(".form-container").style.display = "none";
+                document.querySelector(".form-step-2").style.display = "block";
+            } else {
+                // Se algum campo não for preenchido, mostrar a mensagem de erro
+                document.querySelector("#error-message").style.display = "block";
+            }
+        }
+
+        // Adicionar o evento sempre que o botão for carregado ou a linguagem for trocada
+        addNextButtonEventListener();
+    }
+});
+
+// Adicionar evento ao selector de linguagem
+document.getElementById('languageSelector').addEventListener('change', function() {
+    let lang = this.value;
+    updateLanguage(lang);
+    // Reassociar o evento após a troca de linguagem
+    const btnNext = document.querySelector(".btn-next");
+    if (btnNext) {
+        addNextButtonEventListener();
+    }
+});
+
+
+
+
+            
+document.querySelector("#continue-plan").addEventListener("click", function () {
+    const selectedPlan = document.querySelector(".plan-btn.selected");
+
+    if (selectedPlan && selectedPlan.getAttribute("data-plan") === "semanal") {
+        window.location.href = "pickSE.html";
+    } 
+    if (selectedPlan && selectedPlan.getAttribute("data-plan") === "personalizado") {
+        window.location.href = "pickDI.html";
+    }
+    if (selectedPlan && selectedPlan.getAttribute("data-plan") === "mensal") {
+        window.location.href = "pickME.html";
+    }
+});
+
+
+            document.querySelectorAll(".plan-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    document.querySelectorAll(".plan-btn").forEach(btn => btn.classList.remove("selected"));
+                    this.classList.add("selected");
+                });
+            });
+
+            document.querySelector("#back-to-form").addEventListener("click", function () {
+            document.querySelector(".form-step-2").style.display = "none";
+            document.querySelector(".form-container").style.display = "flex"; 
+        });
+        </script>
+
+        <style>
+            .form-step-2 {
+                width: 90%;
+                max-width: 900px;
+                background: white;
+                padding: 40px;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                margin: 0 auto;
+            }
+            
+            .plan-options {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            
+            .plan-btn {
+                background: #f4f4f4;
+                border: 2px solid #ddd;
+                padding: 15px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+            
+            .plan-btn.selected {
+                border-color: #4CAF50;
+                background: #e8f5e9;
+            }
+            .button-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+            
+            .btn-back {
+                background: #9d9d9d;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .btn-next {
+                background: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+
+
+        
+        
+
+        <!-- Footer Start -->
+         <!-- Rodapé Início -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="company">Empresa</h4>
+                <a class="btn btn-link" href="about.html" data-lang="about_us">Sobre nós</a>
+                <a class="btn btn-link" href="https://www.instagram.com/eatsimple___/" data-lang="contact_us">Fale conosco</a>
+                <a class="btn btn-link" href="Order.html" data-lang="order">Fazer pedido</a>
+                <a class="btn btn-link" href="" data-lang="privacy_policy">Política de privacidade</a>
+                <a class="btn btn-link" href="" data-lang="terms_conditions">Termos e condições</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="contacts">Contatos</h4>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><span data-lang="phone">+351 937097975</span></p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><span data-lang="email">BeebsCooking@gmail.com</span></p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61571015889979"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="newsletter">Newsletter</h4>
+                <p data-lang="newsletter_text">Receba todas as novidades e aproveite descontos exclusivos</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Seu e-mail" data-lang="email_placeholder">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" data-lang="subscribe">Inscrever-me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#" data-lang="brand">EatSimple</a>, <span data-lang="rights_reserved">Todos os direitos reservados.</span>
+                    <span data-lang="designed_by">Desenvolvido por</span> <a class="border-bottom" href="https://htmlcodex.com/" data-lang="html_codex">HTML Codex</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="index.html" data-lang="menu">Menu</a>
+                        <a href="" data-lang="help">Ajuda</a>
+                        <a href="" data-lang="faq">Perguntas Frequentes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Rodapé Fim -->
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+    
+    
+    <script src="js/main.js"></script>
+</body>
+
+
+<style>
+    
+@media (max-width: 767px) {
+    .form-container {
+        flex-direction: column; 
+        padding: 20px; 
+        margin-top: 20px; 
+    }
+
+    .form-group {
+        flex-direction: column; 
+        margin-bottom: 10px; 
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%; 
+    }
+
+    img {
+        width: 60%; 
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+
+    .btn-next {
+        width: 100%; 
+        padding: 12px; 
+    }
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.container-xxl {
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+@media (max-width: 767px) {
+    .form-container {
+        flex-direction: column; 
+        padding: 20px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn-next,
+    .btn-back {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    img {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .form-step-2 {
+        width: 90%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .plan-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .plan-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-container {
+        flex-direction: column;
+        width: 80%;
+        padding: 30px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .btn-next,
+    .btn-back {
+        width: auto;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    img {
+        width: 60%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .form-step-2 {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .plan-options {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .plan-btn {
+        width: 45%;
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .form-container {
+        flex-direction: row;
+        width: 70%;
+        padding: 40px;
+    }
+
+    .form-group {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 48%;
+    }
+
+    img {
+        width: 350px;
+        margin-left: 40px;
+    }
+
+    .form-step-2 {
+        width: 70%;
+        padding: 40px;
+    }
+
+    .plan-options {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .plan-btn {
+        width: auto;
+        padding: 16px;
+        font-size: 18px;
+    }
+}
+
+
+
+</style>
+</html>
+

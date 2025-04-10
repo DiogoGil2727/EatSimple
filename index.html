@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EatSimple</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    
+    <link href="img/favicon.ico" rel="icon">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icons.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">A carregar...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+<div class="container-xxl position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="text-primary m-0">
+                <span class="text-eat">Eat</span><span class="text-simple">Simple</span>
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="about.html" class="nav-item nav-link" data-lang="sobre">Sobre nós</a>
+                <a href="index.html" class="nav-item nav-link active" data-lang="menu">Menu</a>
+                <a href="https://www.instagram.com/eatsimple___/" class="nav-item nav-link" data-lang="contacto">Contacta-nos</a>
+            </div>
+            <a href="Order.html" class="btn btn-primary py-2 px-4" data-lang="encomendar">Encomendar</a>
+            
+            <!-- Language Selector with Flags -->
+            <select id="languageSelector" class="ms-3 form-select form-select-sm w-auto">
+                <option value="pt" data-icon="flag-icon-pt">PT</option>
+                <option value="en" data-icon="flag-icon-gb">EN</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container-xxl py-5 bg-dark hero-header mb-5">
+        <div class="container text-center my-5 pt-5 pb-4">
+            <h1 class="display-3 text-white mb-3 animated slideInDown" data-lang="menu">Menu</h1>
+        </div>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
+
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Menu</h5>
+                    <h1 class="mb-5" data-lang="T1">Pequeno-Almoço, Almoço ou Jantar, tudo a pensar em ti</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                <i class="fa fa-coffee fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body" data-lang="D1">Deliciosos</small>
+                                    <h6 class="mt-n1 mb-0" data-lang="P1">Pequenos-Almoços</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                                <i class="fa fa-hamburger fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body" data-lang="A1">As mais procuradas</small>
+                                    <h6 class="mt-n1 mb-0" data-lang="R1">Refeições</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                <i class="fa fa-utensils fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body" data-lang="D2">Deliciosas</small>
+                                    <h6 class="mt-n1 mb-0" data-lang="R2">Refeições Veggie</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/P1.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Overnight Oats</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ1">Base de iogurte grego, leite e aveia, com banana, framboesa e manteiga de amendoim, adoçado com xarope de agave.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (P2)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ2">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/BG.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Bagel Energy Boost</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ3">Bagel torrado com manteiga de amendoim, banana e canela. Acompanhado com ovos mexidos no ponto.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (P4)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ4">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (P5)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ5">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/p6.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Sunrise breakfast Wrap</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ6">Tortilha com omelete de ovo e cubos de tomate, acompanhada por fiambre e finalizada com molho de iogurte.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (P7)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ7">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (P8)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="PQ8">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/bb889dbc-bb28-4ee5-ab31-bc596e2cd693.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Wrap Mediterrâneo</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL1">Peito de frango marinado em iogurte grego, com vegetais frescos e molho tzatziki.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (A2)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL2">Aqui estará uma Aqui estará uma Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/burritobowl.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Burrito Bowl Mexicano</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL3">Peito de frango com arroz mexicano, feijão, pico de gallo e molho de abacate e coentros.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/a4.jpeg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Crispy Fiesta</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL4">Carne suculenta, Batatas concrantes, cebola roxa, pimento verde, tomate e coentros frescos</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (A5)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL5">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (A6)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL6">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (A7)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL7">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (A8)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="AL8">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J1)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA1">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J2)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA2">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J3)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA3">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/bb889dbc-bb28-4ee5-ab31-bc596e2cd693.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Wrap Veggie Umami</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA4">Cogumelos com glaze de soja, acompanhados de vegetais crocantes e molho tzatziki.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J5)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA5">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J6)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA6">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J7)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA7">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/brev.png" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span data-lang="S5">Brevemente (J8)</span>
+                                                <span class="text-primary">€€</span>
+                                            </h5>
+                                            <small class="fst-italic" data-lang="JA8">Aqui estará uma breve descrição sobre o prato, espera e delicia-te!.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+         
+        <!-- ------------------------------------------------------------------------------ -->
+        <script>
+
+const translations = {
+        'pt': {
+            'sobre': 'Sobre nós',
+            'menu': 'Menu',
+            'contacto': 'Contacta-nos',
+            'encomendar': 'Encomendar',
+            "T1": "Pequeno-Almoço, Almoço ou Jantar, tudo a pensar em ti",
+            company: "Empresa",
+            about_us: "Sobre nós",
+            contact_us: "Fale conosco",
+            order: "Fazer pedido",
+            privacy_policy: "Política de privacidade",
+            terms_conditions: "Termos e condições",
+            contacts: "Contatos",
+            phone: "+351 937097975",
+            email: "BeebsCooking@gmail.com",
+            newsletter: "Newsletter",
+            newsletter_text: "Receba todas as novidades e aproveite descontos exclusivos",
+            email_placeholder: "Seu e-mail",
+            subscribe: "Inscrever-me",
+            brand: "EatSimple",
+            rights_reserved: "Todos os direitos reservados.",
+            designed_by: "Desenvolvido por",
+            html_codex: "HTML Codex",
+            menu: "Menu",
+            help: "Ajuda",
+            faq: "Perguntas Frequentes",
+            D1: "Deliciosos",
+            P1: "Pequenos-almoços",
+            A1: "As mais procuradas",
+            R1: "Refeições",
+            D2: "Deliciosas",
+            R2: "Refeições Veggie",
+            PQ1: "Base de iogurte grego, leite e aveia, com banana, framboesa e manteiga de amendoim, adoçado com xarope de agave.",
+            PQ2: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            PQ3: "Bagel torrado com manteiga de amendoim, banana e canela. Acompanhado com ovos mexidos no ponto.", 
+            PQ4: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            PQ5: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            PQ6: "Tortilha com omelete de ovo e cubos de tomate, acompanhada por fiambre e finalizada com molho de iogurte.", 
+            PQ7: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            PQ8: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+
+            AL1: "Peito de frango marinado em iogurte grego, com vegetais frescos e molho tzatziki.", 
+            AL2: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            AL3: "Peito de frango com arroz mexicano, feijão, pico de gallo e molho de abacate e coentros.", 
+            AL4: "Carne suculenta, Batatas concrantes, cebola roxa, pimento verde, tomate e coentros frescos", 
+            AL5: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            AL6: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            AL7: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            AL8: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+
+            JA1: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            JA2: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            JA3: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            JA4: "Cogumelos com glaze de soja, acompanhados de vegetais crocantes e molho tzatziki.", 
+            JA5: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            JA6: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            JA7: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!", 
+            JA8: "Aqui estará uma breve descrição sobre o prato, espera e delicia-te!",
+
+            T2: "Explora também as nossas sobremesas proteicas",
+            S1: "Brevemente (S1)",
+            S2: "Brevemente (S2)",
+            S3: "Brevemente (S3)",
+            S4: "Brevemente (S4)",
+            S5: "Brevemente (S5)",
+
+            DESK1: "Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!",
+            DESK2: "Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!",
+            DESK3: "Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!",
+            DESK4: "Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!",
+            DESK5: "Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!"
+
+
+        },
+        'en': {
+            'sobre': 'About Us',
+            'menu': 'Menu',
+            'contacto': 'Contact Us',
+            'encomendar': 'Order',
+            "T1": "Breakfast, Lunch, or Dinner, all thinking about you.",
+            company: "Company",
+            about_us: "About Us",
+            contact_us: "Contact Us",
+            order: "Order",
+            privacy_policy: "Privacy Policy",
+            terms_conditions: "Terms & Conditions",
+            contacts: "Contacts",
+            phone: "+351 937097975",
+            email: "BeebsCooking@gmail.com",
+            newsletter: "Newsletter",
+            newsletter_text: "Get all the latest news and enjoy exclusive discounts",
+            email_placeholder: "Your email",
+            subscribe: "Subscribe",
+            brand: "EatSimple",
+            rights_reserved: "All rights reserved.",
+            designed_by: "Designed by",
+            html_codex: "HTML Codex",
+            menu: "Menu",
+            help: "Help",
+            faq: "FAQs",
+            D1: "Delicious",
+P1: "Breakfasts",
+A1: "The best-selling",
+R1: "Meals",
+D2: "Delicious",
+R2: "Veggie Meals",
+PQ1: "Greek yogurt base, milk and oats, with banana, raspberry, and peanut butter, sweetened with agave syrup.",
+PQ2: "Here will be a brief description of the dish, wait and enjoy!",
+PQ3: "Toasted bagel with peanut butter, banana, and cinnamon. Served with perfectly scrambled eggs.",
+PQ4: "Here will be a brief description of the dish, wait and enjoy!",
+PQ5: "Here will be a brief description of the dish, wait and enjoy!",
+PQ6: "Tortilla with egg omelette and tomato cubes, served with ham and topped with yogurt sauce.",
+PQ7: "Here will be a brief description of the dish, wait and enjoy!",
+PQ8: "Here will be a brief description of the dish, wait and enjoy!",
+
+AL1: "Chicken breast marinated in Greek yogurt, with fresh vegetables and tzatziki sauce.",
+AL2: "Here will be a brief description of the dish, wait and enjoy!",
+AL3: "Chicken breast with Mexican rice, beans, pico de gallo, and avocado and cilantro sauce.",
+AL4: "Juicy meat, crispy potatoes, red onion, green pepper, tomato, and fresh cilantro.",
+AL5: "Here will be a brief description of the dish, wait and enjoy!",
+AL6: "Here will be a brief description of the dish, wait and enjoy!",
+AL7: "Here will be a brief description of the dish, wait and enjoy!",
+AL8: "Here will be a brief description of the dish, wait and enjoy!",
+
+JA1: "Here will be a brief description of the dish, wait and enjoy!",
+JA2: "Here will be a brief description of the dish, wait and enjoy!",
+JA3: "Here will be a brief description of the dish, wait and enjoy!",
+JA4: "Mushrooms with soy glaze, served with crispy vegetables and tzatziki sauce.",
+JA5: "Here will be a brief description of the dish, wait and enjoy!",
+JA6: "Here will be a brief description of the dish, wait and enjoy!",
+JA7: "Here will be a brief description of the dish, wait and enjoy!",
+JA8: "Here will be a brief description of the dish, wait and enjoy!",
+
+T2: "Explore our protein desserts",
+S1: "Coming soon (S1)",
+S2: "Coming soon (S2)",
+S3: "Coming soon (S3)",
+S4: "Coming soon (S4)",
+S5: "Coming soon (S5)",
+DESK1: "Here will be a brief description of the dessert, wait and enjoy!",
+DESK2: "Here will be a brief description of the dessert, wait and enjoy!",
+DESK3: "Here will be a brief description of the dessert, wait and enjoy!",
+DESK4: "Here will be a brief description of the dessert, wait and enjoy!",
+DESK5: "Here will be a brief description of the dessert, wait and enjoy!"
+
+
+        }
+    };
+
+    function updateLanguage(lang) {
+        const elements = document.querySelectorAll('[data-lang]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-lang');
+            const translation = translations[lang][key];
+
+            if (translation) {
+                if (el.placeholder !== undefined) {
+                    el.placeholder = translation;
+                }
+
+                if (el.tagName === "INPUT" || el.tagName === "BUTTON") {
+                    el.value = translation;
+                } else {
+                    el.textContent = translation;
+                }
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'pt';
+        document.getElementById('languageSelector').value = savedLang;
+        updateLanguage(savedLang);
+    });
+
+    document.getElementById('languageSelector').addEventListener('change', function () {
+        const lang = this.value;
+        localStorage.setItem('selectedLanguage', lang);
+        updateLanguage(lang);
+    });
+
+            $(document).ready(function(){
+                $(".team-carousel").owlCarousel({
+                    loop: true,
+                    margin: 30,
+                    nav: true,
+                    dots: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: { items: 1 },
+                        576: { items: 2 },
+                        768: { items: 3 },
+                        992: { items: 4 }
+                    }
+                });
+            });
+            
+        </script>
+        <!-- Sobremezas Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h1 class="display-8 text-uppercase mb-0 sobremesas-title" data-lang="T2">Explora também as nossas sobremesas proteicas</h1>
+
+            </div>
+            <div class="owl-carousel team-carousel position-relative" style="padding-right: 25px;">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/brev.png" alt="">
+                        <div class="team-overlay">
+                            <div class="team-overlay">
+                                <a href="#" class="btn btn-light text-uppercase px-4 py-2" data-lang="encomendar">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase" data-lang="S1">Brevemente (S1)</h5>
+                        <p class="m-0" data-lang="DESK1">Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/brev.png" alt="">
+                        <div class="team-overlay">
+                            <div class="team-overlay">
+                                <a href="#" class="btn btn-light text-uppercase px-4 py-2" data-lang="encomendar">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase" data-lang="S2">Brevemente (S2)</h5>
+                        <p class="m-0" data-lang="DESK2">Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/brev.png" alt="">
+                        <div class="team-overlay">
+                            <div class="team-overlay">
+                                <a href="#" class="btn btn-light text-uppercase px-4 py-2" data-lang="encomendar">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase" data-lang="S3">Brevemente (S3)</h5>
+                        <p class="m-0" data-lang="DESK3">Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/brev.png" alt="">
+                        <div class="team-overlay">
+                            <div class="team-overlay">
+                                <a href="#" class="btn btn-light text-uppercase px-4 py-2" data-lang="encomendar">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase" data-lang="S4">Brevemente (S4)</h5>
+                        <p class="m-0" data-lang="DESK4">Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/brev.png" alt="">
+                        <div class="team-overlay">
+                            <div class="team-overlay">
+                                <a href="#" class="btn btn-light text-uppercase px-4 py-2">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase" data-lang="S5">Brevemente (S5)</h5>
+                        <p class="m-0" data-lang="DESK5">Aqui estará uma breve descrição sobre a sobremesa, espera e delicia-te!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <!-- Team End -->
+     <style>
+        
+
+
+      /* Esconder as setas de navegação padrão */
+.team-carousel .owl-nav .owl-prev span,
+.team-carousel .owl-nav .owl-next span {
+    display: none !important; /* Força a ocultação do texto */
+    
+}
+
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; /* <-- Aqui está o truque extra */
+    background: var(--primary);
+    font-size: 0; /* <-- Outra camada para garantir que o texto não aparece */
+    transition: .3s;
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+}
+
+/* Remove texto completamente */
+.team-carousel .owl-nav .owl-prev span,
+.team-carousel .owl-nav .owl-next span {
+    display: none !important;
+}
+
+/* Estilo da seta esquerda */
+.team-carousel .owl-nav .owl-prev {
+    left: -22px;
+    background-image: url('img/left-arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilo da seta direita */
+.team-carousel .owl-nav .owl-next {
+    right: 0px;
+    background-image: url('img/right-arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.2);
+}
+
+.team-item .team-overlay {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    bottom: 45px;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #63A375;
+    transition: .5s;
+    opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    bottom: 45px;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #63A375;
+    transition: .5s;
+    opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.team-overlay a {
+    background-color: white;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.team-overlay a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+     </style>
+    <!-- ------------------------------------------------------------------------------ -->
+         <!-- Footer Start -->
+         <!-- Rodapé Início -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="company">Empresa</h4>
+                <a class="btn btn-link" href="about.html" data-lang="about_us">Sobre nós</a>
+                <a class="btn btn-link" href="https://www.instagram.com/eatsimple___/" data-lang="contact_us">Fale conosco</a>
+                <a class="btn btn-link" href="Order.html" data-lang="order">Fazer pedido</a>
+                <a class="btn btn-link" href="" data-lang="privacy_policy">Política de privacidade</a>
+                <a class="btn btn-link" href="" data-lang="terms_conditions">Termos e condições</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="contacts">Contatos</h4>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><span data-lang="phone">+351 937097975</span></p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><span data-lang="email">BeebsCooking@gmail.com</span></p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61571015889979"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4" data-lang="newsletter">Newsletter</h4>
+                <p data-lang="newsletter_text">Receba todas as novidades e aproveite descontos exclusivos</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Seu e-mail" data-lang="email_placeholder">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" data-lang="subscribe">Inscrever-me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#" data-lang="brand">EatSimple</a>, <span data-lang="rights_reserved">Todos os direitos reservados.</span>
+                    <span data-lang="designed_by">Desenvolvido por</span> <a class="border-bottom" href="https://htmlcodex.com/" data-lang="html_codex">HTML Codex</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="index.html" data-lang="menu">Menu</a>
+                        <a href="" data-lang="help">Ajuda</a>
+                        <a href="" data-lang="faq">Perguntas Frequentes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Rodapé Fim -->
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
