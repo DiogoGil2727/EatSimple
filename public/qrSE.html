@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .qr-code {
+            width: 250px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .payment-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 15px;
+        }
+        .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    margin-top: 20px;
+}
+
+button[type="Pag"], button[type="submit2"] {
+    width: 70%;  /* Ajusta o tamanho dos botões para centralizar */
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 10px 0; /* Adiciona espaçamento entre os botões */
+}
+
+button[type="Pag"] {
+    background: #ff9f1c;
+    color: white;
+}
+
+button[type="Pag"]:hover {
+    background: #ff7f00;
+}
+
+button[type="submit2"] {
+    background: #6c757d;
+    color: white;
+}
+
+button[type="submit2"]:hover {
+    background: #545b62;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <select id="languageSelector" class="ms-3 form-select form-select-sm w-auto">
+        <option value="pt" data-icon="flag-icon-pt">PT</option>
+        <option value="en" data-icon="flag-icon-gb">EN</option>
+    </select>
+    <h2 data-lang="pg">Pagamento via MbWay</h2>
+    <img src="img/qr.jpg" alt="QR Code" class="qr-code">
+    <p class="payment-text" data-lang="paymentText">Efetue a transação do valor <span id="valorTotal"></span> para a compra ser efetuada.</p>
+    <div class="button-container">
+        <button type="submit2" data-lang="reg">Regressar</button>
+        <button onclick="saveSelection()" type="Pag" data-lang="pp">Página principal</button>
+    </div>
+</div>
+
+<script>
+    const translations = {
+        'pt': {
+            'sobre': 'Sobre nós',
+            'menu': 'Menu',
+            'contacto': 'Contacta-nos',
+            'encomendar': 'Encomendar',
+            "T1": "Pequeno-Almoço, Almoço ou Jantar, tudo a pensar em ti",
+            company: "Empresa",
+            about_us: "Sobre nós",
+            contact_us: "Fale conosco",
+            order: "Fazer pedido",
+            privacy_policy: "Política de privacidade",
+            terms_conditions: "Termos e condições",
+            contacts: "Contatos",
+            phone: "+351 937097975",
+            email: "BeebsCooking@gmail.com",
+            newsletter: "Newsletter",
+            newsletter_text: "Receba todas as novidades e aproveite descontos exclusivos",
+            email_placeholder: "Seu e-mail",
+            subscribe: "Inscrever-me",
+            brand: "EatSimple",
+            rights_reserved: "Todos os direitos reservados.",
+            designed_by: "Desenvolvido por",
+            html_codex: "HTML Codex",
+            menu: "Menu",
+            help: "Ajuda",
+            faq: "Perguntas Frequentes",
+            personaliza: "Personaliza a tua Refeição",
+        selecioneobjetivo: "Selecione Objetivo...",
+        bulk: "Bulk (Aumento de Massa)",
+        cut: "Cut (Definição)",
+        manutencao: "Manutenção",
+        peso: "Peso (Kg)",
+        idade: "Idade",
+        selecionesexo: "Sexo",
+        masculino: "Masculino",
+        feminino: "Feminino",
+        email: "Email",
+        selecioneatividade: "Selecione Nível de atividade física...",
+        regular: "Regular",
+        sedentario: "Sedentário",
+        atleta: "Atleta",
+        erroformulario: "Precisas de responder a todos os campos de personalização...",
+        proximo: "Próximo",
+        personalizado: "Plano Personalizado",
+        semanal: "Plano Semanal (7 Dias)",
+        mensal: "Plano Mensal (30 Dias)",
+        reg: "Regressar",
+        cont: "Continuar",
+        escolhe: "Escolhe o teu Plano",
+        oteu: "O teu plano",
+        pg: "Pagamento via MbWay",
+        paymentText: "Efetue a transação do valor {value} para a compra ser efetuada.",
+        pp: "Página principal"
+            
+
+
+        },
+        'en': {
+            'sobre': 'About Us',
+            'menu': 'Menu',
+            'contacto': 'Contact Us',
+            'encomendar': 'Order',
+            "T1": "Breakfast, Lunch, or Dinner, all thinking about you.",
+            company: "Company",
+            about_us: "About Us",
+            contact_us: "Contact Us",
+            order: "Order",
+            privacy_policy: "Privacy Policy",
+            terms_conditions: "Terms & Conditions",
+            contacts: "Contacts",
+            phone: "+351 937097975",
+            email: "BeebsCooking@gmail.com",
+            newsletter: "Newsletter",
+            newsletter_text: "Get all the latest news and enjoy exclusive discounts",
+            email_placeholder: "Your email",
+            subscribe: "Subscribe",
+            brand: "EatSimple",
+            rights_reserved: "All rights reserved.",
+            designed_by: "Designed by",
+            html_codex: "HTML Codex",
+            menu: "Menu",
+            help: "Help",
+            faq: "FAQs",
+            personaliza: "Customize Your Meal",
+        selecioneobjetivo: "Select Goal...",
+        bulk: "Bulk (Muscle Gain)",
+        cut: "Cut (Definition)",
+        manutencao: "Maintenance",
+        peso: "Weight (Kg)",
+        idade: "Age",
+        selecionesexo: "Gender",
+        masculino: "Male",
+        feminino: "Female",
+        email: "Email",
+        selecioneatividade: "Select Activity Level...",
+        regular: "Regular",
+        sedentario: "Sedentary",
+        atleta: "Athlete",
+        erroformulario: "You need to answer all customization fields...",
+        proximo: "Next",
+        personalizado: "Personalized Plan",
+        semanal: "Weekly Plan (7 Days)",
+        mensal: "Monthly Plan (30 Days)",
+        reg: "Back",
+        cont: "Continue",
+        escolhe: "Choose your plan",
+        oteu: "Your Plan",
+        pg: "Payment via MbWay",
+        paymentText: "Please make the payment of {value} to complete the purchase.",
+        pp: "Main page"
+            
+        }
+    };
+
+   
+
+    function updateLanguage(lang) {
+    document.querySelectorAll("[data-lang]").forEach(element => {
+        const key = element.getAttribute("data-lang");
+        let translation = translations[lang][key];
+
+        if (translation) {
+            // Caso contenha {value}, substitui pelo valor atual
+            if (translation.includes('{value}')) {
+                const valorTotal = document.getElementById('valorTotal')?.textContent || '';
+                translation = translation.replace('{value}', valorTotal);
+                element.innerHTML = translation; // Usa innerHTML para manter o <span>
+            } else {
+                element.textContent = translation;
+            }
+        }
+    });
+
+    document.querySelectorAll("[data-lang-placeholder]").forEach(input => {
+        const key = input.getAttribute("data-lang-placeholder");
+        if (translations[lang][key]) {
+            input.setAttribute("placeholder", translations[lang][key]);
+        }
+    });
+}
+
+document.getElementById('languageSelector').addEventListener('change', function() {
+    let lang = this.value;
+    updateLanguage(lang);
+    // Reassociar o evento após a troca de linguagem
+    const btnNext = document.querySelector(".btn-next");
+    if (btnNext) {
+        addNextButtonEventListener();
+    }
+});
+
+window.addEventListener('DOMContentLoaded', function () {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'pt';
+        document.getElementById('languageSelector').value = savedLang;
+        updateLanguage(savedLang);
+    });
+
+    document.getElementById('languageSelector').addEventListener('change', function () {
+        const lang = this.value;
+        localStorage.setItem('selectedLanguage', lang);
+        updateLanguage(lang);
+    });
+
+    function formatCurrency(value) {
+        return `€${value.toFixed(2)}`;
+    }
+
+    // Obter os valores do localStorage
+    const selectedMeals = JSON.parse(localStorage.getItem("selectedMeals"));
+    
+    let totalValue = 0;
+    
+    // Somar os preços das refeições escolhidas
+    if (selectedMeals) {
+        Object.values(selectedMeals).forEach(day => {
+            totalValue += (day.pequeno ? day.pequeno.price : 0) +
+                          (day.almoco ? day.almoco.price : 0) +
+                          (day.jantar ? day.jantar.price : 0);
+        });
+    }
+
+    // Exibir o valor total na página
+    document.getElementById('valorTotal').textContent = formatCurrency(totalValue);
+
+    document.getElementById('valorTotal').textContent = formatCurrency(totalValue);
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const confirmButton = document.querySelector('button[type="Pag"]');
+    confirmButton.addEventListener('click', function () {
+        window.location.href = 'index.html';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const confirmButton = document.querySelector('button[type="submit2"]');
+    confirmButton.addEventListener('click', function () {
+        window.location.href = 'acceptSE.html';
+    });
+});
+</script>
+
+</body>
+</html>
